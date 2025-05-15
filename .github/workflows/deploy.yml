@@ -29,7 +29,8 @@ jobs:
         branch: gh-pages
         folder: dist
         token: ${{ secrets.GITHUB_TOKEN }}
+        # Добавьте эти параметры ↓
         repository-name: ${{ github.repository }}
+        git-config-name: "GitHub Actions Bot"
+        git-config-email: "actions@github.com"
         force: true
-        clean: true
-        single-commit: true
