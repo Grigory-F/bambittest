@@ -2,11 +2,14 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Критически важно!
 
     steps:
     - name: Checkout code
@@ -28,9 +31,6 @@ jobs:
       with:
         branch: gh-pages
         folder: dist
-        token: ${{ secrets.GITHUB_TOKEN }}
-        # Добавьте эти параметры ↓
-        repository-name: ${{ github.repository }}
-        git-config-name: "GitHub Actions Bot"
-        git-config-email: "actions@github.com"
+        token: ${{ secrets.GITHUB_TOKEN }}  # или secrets.GITHUB_TOKEN
         force: true
+        clean: true
