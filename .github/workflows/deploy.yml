@@ -29,3 +29,6 @@ jobs:
         branch: gh-pages
         folder: dist
         token: ${{ secrets.GITHUB_TOKEN }}
+        # Добавьте это ↓
+        repository-name: ${{ github.repository }}
+        force: true
