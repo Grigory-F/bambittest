@@ -1,1 +1,0 @@
-export { default as AppDefaultLayout } from './AppDefaultLayout.vue';
