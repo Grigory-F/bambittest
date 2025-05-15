@@ -29,3 +29,7 @@ jobs:
         branch: gh-pages
         folder: dist
         token: ${{ secrets.GITHUB_TOKEN }}
+        repository-name: ${{ github.repository }}
+        force: true
+        clean: true
+        single-commit: true
