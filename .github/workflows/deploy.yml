@@ -31,6 +31,6 @@ jobs:
       with:
         branch: gh-pages
         folder: dist
-        token: ${{ secrets.GITHUB_TOKEN }}  # или secrets.GITHUB_TOKEN
+        token: ${{ secrets.DEPLOY_TOKEN }}  # или secrets.GITHUB_TOKEN
         force: true
         clean: true
